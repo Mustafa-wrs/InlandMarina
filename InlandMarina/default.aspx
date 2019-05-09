@@ -6,12 +6,13 @@
 <head runat="server">
     <title>Home</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="Content/style.css" rel="stylesheet" />
     
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="nav">
+            <img src="Images/inlandmarina_banner.jpg" />
         </div>
     </form>
 
