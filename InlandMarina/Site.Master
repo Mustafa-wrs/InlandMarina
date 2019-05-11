@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="InlandMarina.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- Nav --%>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false">
+                    <title>Product</title>
+                    <circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="#">Home</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlAvailableSlip" runat="server" NavigateUrl="#">Available Slip</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="#">Lease Slip</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlRegister" runat="server" NavigateUrl="#">Register</asp:HyperLink>
+                    </li>
+                    <li class="nav-item">
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="#">Contact Us</asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="cphIntroImage" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="cphCompanyInformation" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%-- Footer --%>
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <h5>Address</h5>
+                    <address>
+                        Inland Lake Marina<br />
+                        Box 123<br />
+                        Inland Lake, Arizona<br />
+                        86038<br />
+                    </address>
+                </div>
+                <div class="col-12 col-md">
+                    <h5>Out Contacts</h5>
+                    <address>
+                        (Offfice Phone) 928-450-2234<br />
+                        (Leasing Phone) 928-450-2235<br />
+                        (Fax) 928-450-2236<br />
+                    </address>
+                </div>
+                <div class="col-12 col-md">
+                    <h5>Our Team</h5>
+                    <address>
+                        Manager: Glenn Cooke<br />
+                        Slip Manager: Kimberley Carson<br />
+                        Contact email: info@inlandmarina.com<br />
+                    </address>
+                </div>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>

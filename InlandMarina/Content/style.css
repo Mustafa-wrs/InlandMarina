@@ -24,7 +24,7 @@
 
 
 .backgroundImage {
-    background: url('../Images/background.jpg') center;
+    background: url('../Images/background.jpg') no-repeat center;
 }
 
 .text-Shadow {
