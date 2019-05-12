@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="#">Home</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="#"><span class="glyphicon glyphicon-search"></span> Home</asp:HyperLink>
                     </li>
                     <li class="nav-item">
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlAvailableSlip" runat="server" NavigateUrl="#">Available Slip</asp:HyperLink>

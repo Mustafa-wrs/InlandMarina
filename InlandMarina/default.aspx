@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="InlandMarina._default" MasterPageFile="Site.Master" Title="Home" %>
 
+<%-- CSS and JavaScript links --%>
 <asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
@@ -8,15 +9,18 @@
     <script src="Scripts/bootstrap.min.js"></script>
 </asp:Content>
 
+<%-- Introduction image card --%>
 <asp:Content ID="cIntroImage" ContentPlaceHolderID="cphIntroImage" runat="server">
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light backgroundImage">
         <div class="col-md-8 p-lg-5 mx-auto my-5">
             <h1 class="display-4 font-weight-normal text-white text-Shadow">Inland Marina</h1>
             <p class="lead font-weight-normal text-white text-Shadow">Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major centers in the south west</p>
-            <a class="btn btn-secondary text-white" href="#learnMore">Learn more</a>
+            <a class="btn btn-primary text-white" href="#learnMore">Learn more</a>
         </div>
     </div>
 </asp:Content>
+
+<%-- Company information card --%>
 <asp:Content ID="cCompanyInformation" ContentPlaceHolderID="cphCompanyInformation" runat="server">
     <div id="learnMore" class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
         <div class="col-sm-12 col-md-12 col-lg-10 p-lg-5 mx-auto my-5">
