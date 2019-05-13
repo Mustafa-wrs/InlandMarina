@@ -80,6 +80,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\background.jpg" />
     <Content Include="Images\inlandmarina_banner.jpg" />
     <Content Include="LeaseSlip.aspx" />
@@ -153,6 +154,9 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LeaseSlip.aspx.cs">
       <DependentUpon>LeaseSlip.aspx</DependentUpon>
