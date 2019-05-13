@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="InlandMarina.ContactUs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="InlandMarina.ContactUs" MasterPageFile="Site.Master" Title="Contact Us" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cHeader" ContentPlaceHolderID="cphIntroImage" runat="server">
+     <h1>Contact Us Page</h1>
+</asp:Content>

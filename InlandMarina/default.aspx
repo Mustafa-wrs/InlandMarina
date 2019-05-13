@@ -1,13 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="InlandMarina._default" MasterPageFile="Site.Master" Title="Home" %>
 
-<%-- CSS and JavaScript links --%>
-<asp:Content ID="cHead" ContentPlaceHolderID="head" runat="server">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/style.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.4.1.slim.min.js"></script>
-    <script src="Scripts/umd/popper.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-</asp:Content>
 
 <%-- Introduction image card --%>
 <asp:Content ID="cIntroImage" ContentPlaceHolderID="cphIntroImage" runat="server">

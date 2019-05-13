@@ -1,15 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LeaseSlip.aspx.cs" Inherits="InlandMarina.LeaseSlip" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LeaseSlip.aspx.cs" Inherits="InlandMarina.LeaseSlip" MasterPageFile="Site.Master" Title="Lease Slip" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cHeader" ContentPlaceHolderID="cphIntroImage" runat="server">
+    <h1>Lease Slip Page</h1>
+</asp:Content>

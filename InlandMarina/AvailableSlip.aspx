@@ -1,15 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AvailableSlip.aspx.cs" Inherits="InlandMarina.AvailableSlip" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AvailableSlip.aspx.cs" Inherits="InlandMarina.AvailableSlip" MasterPageFile="Site.Master" Title="Available Slip" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cHeader" ContentPlaceHolderID="cphIntroImage" runat="server">
+     <h1>Available Slip Page</h1>
+</asp:Content>

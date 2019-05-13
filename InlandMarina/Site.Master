@@ -6,6 +6,11 @@
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="Content/style.css" rel="stylesheet" />
+        <script src="Scripts/jquery-3.4.1.slim.min.js"></script>
+        <script src="Scripts/umd/popper.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -23,19 +28,19 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="#"><span class="glyphicon glyphicon-search"></span> Home</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="~/default.aspx"><span class="glyphicon glyphicon-search"></span> Home</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlAvailableSlip" runat="server" NavigateUrl="#">Available Slip</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlAvailableSlip" runat="server" NavigateUrl="~/AvailableSlip.aspx">Available Slip</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="#">Lease Slip</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="~/LeaseSlip.aspx">Lease Slip</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlRegister" runat="server" NavigateUrl="#">Register</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlRegister" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="#">Contact Us</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
                     </li>
                 </ul>
             </div>
