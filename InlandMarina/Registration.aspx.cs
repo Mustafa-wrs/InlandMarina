@@ -26,16 +26,7 @@ namespace InlandMarina
         {
         }
 
-            //private void button1_Click(object sender, EventArgs e)
-            //{
-
             
-            //}
-
-        //    private void button2_Click(object sender, EventArgs e)
-        //    {
-        //    DataLayer.RegistrationDB.AddCustomer(FirstName.Text, LastName.Text, Phone.Text, City.Text);
-        //}
 
         protected void Login_Click(object sender, EventArgs e)
         {
@@ -50,11 +41,7 @@ namespace InlandMarina
         
     }
 
-    //protected void Page_Load(object sender, EventArgs e)
-    //    {
-
-
-    //    }
+   
 
     //public static List<ID> GetID()
     //{
