@@ -14,13 +14,15 @@
         Purchase Information
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name <asp:Label ID="nameLbl" runat="server" Text=""></asp:Label></li>
+        <li class="list-group-item">Name: <asp:Label ID="nameLbl" runat="server" Text=""></asp:Label></li>
             
-        <li class="list-group-item">Place <asp:Label ID="dockALbl" runat="server" Text=""></asp:Label></li>
+        <li class="list-group-item">Place: <asp:Label ID="dockALbl" runat="server" Text=""></asp:Label></li>
         
-        <li class="list-group-item">Dock B <asp:Label ID="dockBLbl" runat="server" Text=""></asp:Label></li>
+        <li class="list-group-item">Length: <asp:Label ID="dockBLbl" runat="server" Text=""></asp:Label></li>
         
-          <li class="list-group-item">SLIPS <asp:Label ID="numSlipsLbl" runat="server" Text=""></asp:Label></li>
+          <li class="list-group-item">Electricty: <asp:Label ID="numSlipsLbl" runat="server" Text=""></asp:Label></li>
+
+          <li class="list-group-item">Water:<asp:Label ID="waterlbl" runat="server" Text="Label"></asp:Label></li>
       </ul>
 
     <label  for="exampleFormControlTextarea1"></label>

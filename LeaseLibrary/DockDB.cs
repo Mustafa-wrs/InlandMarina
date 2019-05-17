@@ -31,5 +31,37 @@ namespace LeaseLibrary
             }
             return (Name);
         }
+
+        public static List<string> getSlipBy(int ID)
+        {
+            List<string> result = new List<string>();
+            SqlConnection connection = MarinaDB.GetConnection();
+            try
+            {
+                string sql = "select s.ID, s.Width, s.Length, d.Name, d.ElectricalService, d.WaterService ";
+                sql += "from Slip s ";
+                sql += "join Dock d on s.DockID = d.ID ";
+                sql += "WHERE s.ID = " + ID;
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    result.Add(reader["ID"].ToString()); //0
+                    result.Add(reader["Width"].ToString()); //1
+                    result.Add(reader["Length"].ToString());
+                    result.Add(reader["Name"].ToString());
+                    result.Add(reader["ElectricalService"].ToString());
+                    result.Add(reader["WaterService"].ToString());
+                }
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return result;
+        }
     }
 }

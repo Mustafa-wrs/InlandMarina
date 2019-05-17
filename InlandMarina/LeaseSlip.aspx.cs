@@ -15,14 +15,29 @@ namespace InlandMarina
         {
 
             //string Name = " Amin Aden";
-            nameLbl.Text = CustomerDB.CustomerName(8);
+            nameLbl.Text = CustomerDB.CustomerName(3);
 
+            List<string> leaseInfo = new List<string>();
+            leaseInfo = DockDB.getSlipBy(50);
 
             //string DockA = "Dock A";
-            dockALbl.Text = DockDB.dockname(1); 
+            dockALbl.Text = leaseInfo[3]; //DockDB.dockname(1); 
 
-            string DockB = "xman";
-            dockBLbl.Text = DockB;
+            //string DockB = "xman";
+            dockBLbl.Text = leaseInfo[2];
+            if (Convert.ToBoolean(leaseInfo[4]))
+            {
+                numSlipsLbl.Text = "Yes";
+            }
+            else {
+                numSlipsLbl.Text = "No";
+            }
+           
+            
+
+            waterlbl.Text = leaseInfo[5];
+
+
 
             //using (SqlConnection connection = new SqlConnection(connectionString))
             //{

@@ -13,7 +13,7 @@ namespace DBLibrary
     public static class DB
     {
         private static SqlConnection Connect() {
-            string connectionString = ConfigurationManager.ConnectionStrings["abedConnection"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["aminConnection"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
             return connection;

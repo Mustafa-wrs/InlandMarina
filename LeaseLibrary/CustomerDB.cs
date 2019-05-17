@@ -16,7 +16,7 @@ namespace LeaseLibrary
             SqlConnection connection = MarinaDB.GetConnection();
             try
             {
-                string sql = " select FirstName, LastName FROM Customer where ID = 3; ";
+                string sql = " select FirstName, LastName FROM Customer where ID =" + ID.ToString();
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
