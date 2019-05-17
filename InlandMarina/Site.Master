@@ -37,10 +37,17 @@
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="~/LeaseSlip.aspx">Lease Slip</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlRegister" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+                        <% if (Session["UserName"] == null)
+                            { %>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink2" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <%}
+                        else
+                        {%>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">Logout</asp:HyperLink>
+                        <%} %>
                     </li>
                 </ul>
             </div>
@@ -55,7 +62,7 @@
         </div>
 
         <%-- Footer --%>
-        <footer class="container py-5">
+        <footer class="container py-5" style="clear: both;">
             <div class="row">
                 <div class="col-12 col-md">
                     <h5>Address</h5>
