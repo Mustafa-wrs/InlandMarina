@@ -11,16 +11,16 @@
         <link href="stylesheet/StyleSheet1.css" rel="stylesheet" />
         <div class=" champ card" style="width: 24rem;">
       <div class="card-header">
-        Customer Information
+        Purchase Information
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name<asp:Label ID="nameLbl" runat="server" Text=""></asp:Label></li>
+        <li class="list-group-item">Name <asp:Label ID="nameLbl" runat="server" Text=""></asp:Label></li>
             
-        <li class="list-group-item">Dock A <asp:Label ID="dockALbl" runat="server" Text=""></asp:Label></li>
+        <li class="list-group-item">Place <asp:Label ID="dockALbl" runat="server" Text=""></asp:Label></li>
         
         <li class="list-group-item">Dock B <asp:Label ID="dockBLbl" runat="server" Text=""></asp:Label></li>
         
-          <li class="list-group-item">SLIPS<asp:Label ID="numSlipsLbl" runat="server" Text=""></asp:Label></li>
+          <li class="list-group-item">SLIPS <asp:Label ID="numSlipsLbl" runat="server" Text=""></asp:Label></li>
       </ul>
 
     <label  for="exampleFormControlTextarea1"></label>

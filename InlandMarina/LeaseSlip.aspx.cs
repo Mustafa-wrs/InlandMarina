@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using LeaseLibrary;
 
 namespace InlandMarina
 {
@@ -12,14 +13,15 @@ namespace InlandMarina
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Name =" Amin Aden";
-            nameLbl.Text = Name;
 
-            
-            string DockA = "Dock A";
-            dockALbl.Text = DockA;
+            //string Name = " Amin Aden";
+            nameLbl.Text = CustomerDB.CustomerName(8);
 
-            string DockB = "Dock B";
+
+            //string DockA = "Dock A";
+            dockALbl.Text = DockDB.dockname(1); 
+
+            string DockB = "xman";
             dockBLbl.Text = DockB;
 
             //using (SqlConnection connection = new SqlConnection(connectionString))
