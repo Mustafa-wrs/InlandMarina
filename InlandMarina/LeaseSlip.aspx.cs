@@ -32,7 +32,7 @@ namespace InlandMarina
             else {
                 numSlipsLbl.Text = "No";
             }
-           
+            numSlipsLbl.Text = leaseInfo[4];
             
 
             waterlbl.Text = leaseInfo[5];
