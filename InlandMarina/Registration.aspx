@@ -28,6 +28,7 @@
             float: right;
             width: 600px;
             border: 1px solid lightgray;
+            border-radius: 12px;
             padding: 50px;
             margin: 180px;
         }
@@ -37,6 +38,7 @@
             float: left;
             width: 500px;
             border: 1px solid lightgrey;
+            border-radius: 12px;
             padding: 50px;
             margin: 150px;
         }
@@ -51,11 +53,18 @@
 <asp:Content ID="cIntroImage" ContentPlaceHolderID="cphIntroImage" runat="server">
     <div class="Regis">
         <h1>Register Login</h1><br /><br />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="FirstName" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input First name"></asp:RequiredFieldValidator>
         <asp:TextBox ID="FirstName" class="auto-style6" runat="server" placeholder="First Name"></asp:TextBox><br /><br />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="LastName" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input Last Name"></asp:RequiredFieldValidator>
         <asp:TextBox ID="LastName" class="auto-style6" runat="server" placeholder="Last Name"></asp:TextBox><br /><br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Phone" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input Phone" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Phone" CssClass="text-danger" Display="Dynamic" ErrorMessage="RegularExpressionValidator" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}">Use this format: 123-456-7890</asp:RegularExpressionValidator>
         <asp:TextBox ID="Phone" class="auto-style6" runat="server" placeholder="Phone Number"></asp:TextBox><br /><br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="City" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input City"></asp:RequiredFieldValidator>
         <asp:TextBox ID="City" class="auto-style6" runat="server" placeholder="City"></asp:TextBox><br /><br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="UserName" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input User name"></asp:RequiredFieldValidator>
         <asp:TextBox ID="UserName" class="auto-style6" runat="server" placeholder="UserName"></asp:TextBox> <br /><br />
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="Password" ErrorMessage="RequiredFieldValidator" CssClass="text-danger" Text="Please input password"></asp:RequiredFieldValidator>
         <asp:TextBox type="password" ID="Password" class="auto-style6" runat="server" placeholder="Password"></asp:TextBox><br />
         <asp:Label ID="lblFailed" runat="server" Text="Customer already exist, please try to sign in instead" ForeColor="Red" Visible="False"></asp:Label>
         <asp:Label ID="lblSuccess" runat="server" Text="Registeration successful, please login now" ForeColor="#33CC33" Visible="False"></asp:Label>
