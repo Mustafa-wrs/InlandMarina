@@ -85,6 +85,7 @@
     <Content Include="Images\inlandmarina_banner.jpg" />
     <Content Include="LeaseSlip.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -219,6 +220,12 @@
     <ProjectReference Include="..\LeaseLibrary\LeaseLibrary.csproj">
       <Project>{92463bda-9aec-45a4-b0f4-afc08cefbec1}</Project>
       <Name>LeaseLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BSLibrary\BSLibrary.csproj">
+      <Project>{c985bdab-98c5-4f89-b15e-b78fc2448d8f}</Project>
+      <Name>BSLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -11,6 +11,7 @@
         <script src="/Scripts/jquery-3.4.1.slim.min.js"></script>
         <script src="/Scripts/umd/popper.min.js"></script>
         <script src="/Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/app.js"></script>
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -18,7 +19,7 @@
         <%-- Nav --%>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="py-2" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" viewBox="0 0 24 24">
                     <title>Product</title>
                     <circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
             </a>
@@ -27,7 +28,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlHome" runat="server" NavigateUrl="~/default.aspx"><span class="glyphicon glyphicon-search"></span> Home</asp:HyperLink>
                     </li>
                     <li class="nav-item">
