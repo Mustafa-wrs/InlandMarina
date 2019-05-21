@@ -14,16 +14,17 @@ namespace InlandMarina
         protected void Page_Load(object sender, EventArgs e)
         {
             int customerID = Convert.ToInt32(Session["UserName"]);
-            //int LeasedSlipID = Convert.ToInt32(Session["SlipID"]);
+            int LeasedSlipID = Convert.ToInt32(Session["LeasedSlipID"]);
 
             List<string> leaseInfo = new List<string>();
            
             //This is were you can choose the slip you want to display
-            leaseInfo = DockDB.getSlipInfoBy(5); //Repleace by LeasedSlipID
+            leaseInfo = DockDB.getSlipInfoBy(LeasedSlipID); //Replace by LeasedSlipID
 
-            nameLbl.Text = DockDB.getCustomerInfoBy(1); //Replace by CustomerID
+            nameLbl.Text = DockDB.getCustomerInfoBy(customerID); //Replace by CustomerID
 
             //Dock name
+
             dockALbl.Text = leaseInfo[3]; 
 
             // Width X Length
@@ -51,13 +52,11 @@ namespace InlandMarina
             List<string> slipsLeased = new List<string>();
 
 
-            slipsLeased = DockDB.getSlipsByCustomer(1); //replace by CustomerID
+            slipsLeased = DockDB.getSlipsByCustomer(customerID); //replace by CustomerID
             foreach (string slip in slipsLeased)
             {
                 slipLeaseBox.Items.Add(slip);
             }
-            
-
         }
     }
 }
