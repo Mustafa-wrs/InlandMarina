@@ -86,6 +86,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\background.jpg" />
     <Content Include="Images\inlandmarina_banner.jpg" />
+    <Content Include="Images\loginImage.jpg" />
     <Content Include="LeaseSlip.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\app.js" />

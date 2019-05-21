@@ -34,16 +34,19 @@
                     <li class="nav-item">
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlAvailableSlip" runat="server" NavigateUrl="~/AvailableSlip.aspx">Available Slip</asp:HyperLink>
                     </li>
+                    <% if (Session["UserName"] != null)
+                        { %>
                     <li class="nav-item">
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="~/LeaseSlip.aspx">Lease Slip</asp:HyperLink>
                     </li>
+                     <%} %>
                     <li class="nav-item">
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
                     </li>
                     <li class="nav-item">
                         <% if (Session["UserName"] == null)
                             { %>
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink2" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink2" runat="server" NavigateUrl="~/Registration.aspx">Login/Register</asp:HyperLink>
                         <%}
                         else
                         {%>

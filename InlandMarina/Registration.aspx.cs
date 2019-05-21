@@ -18,15 +18,17 @@ namespace InlandMarina
                 lblFailed.Visible = true;
                 return;
             }
+             
             lblFailed.Visible = false;
             DataLayer.RegistrationDB.AddCustomer(FirstName.Text, LastName.Text, Phone.Text, City.Text, UserName.Text, Password.Text);
             lblSuccess.Visible = true;
-        }
+            }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserName"] != null) {
                 Session.Remove("UserName");
+                Session.Remove("LeasedSlipID");
                 Response.Redirect("default.aspx");
             }
         }  
@@ -43,7 +45,8 @@ namespace InlandMarina
             {
                 Label1.Text = "Username does not exist!";
             }
-            else {
+            else
+            {
                 while (reader.Read())
                 {
                     if (PasswordR.Text == reader["Password"].ToString())
@@ -51,17 +54,17 @@ namespace InlandMarina
                         //Create a session
                         Session["UserName"] = reader["ID"].ToString();
                         //Assign customer id to the session
-                        Response.Redirect("LeaseSlip.aspx");
+                        Response.Redirect("default.aspx");
                     }
                     else
                     {
-                        Label1.Text = "Password is invalid";                   
+                        Label1.Text = "Password is invalid";
                     }
                 }
             }
         }
     }
-  }
+ }
 
 
 
