@@ -5,22 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
-
-namespace LeaseLibrary
-{ 
+namespace DataLayer
+{
     public static class MarinaDB
     {
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection();
-            string ConnectionString = ConfigurationManager.ConnectionStrings["mustafaConnection"].ConnectionString; ;
+            string ConnectionString = ConfigurationManager.ConnectionStrings["mustafaConnection"].ConnectionString;
             connection.ConnectionString = ConnectionString;
             connection.Open();
             return connection;
-
         }
-       
-        }
-
-
+    }
 }
