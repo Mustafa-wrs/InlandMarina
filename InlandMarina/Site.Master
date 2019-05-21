@@ -45,8 +45,8 @@
                             { %>
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink2" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
                         <%}
-                            else
-                            {%>
+                        else
+                        {%>
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">Logout</asp:HyperLink>
                         <%} %>
                     </li>

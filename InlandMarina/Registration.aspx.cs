@@ -55,7 +55,7 @@ namespace InlandMarina
                     }
                     else
                     {
-                        //Label1.Text = "Password is invalid";                   
+                        Label1.Text = "Password is invalid";                   
                     }
                 }
             }
