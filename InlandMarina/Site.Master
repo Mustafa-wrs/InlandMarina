@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         <link href="/Content/bootstrap.min.css" rel="stylesheet" />
         <link href="/Content/style.css" rel="stylesheet" />
+        <link href="Content/StyleSheet1.css" rel="stylesheet" />
         <script src="/Scripts/jquery-3.4.1.slim.min.js"></script>
         <script src="/Scripts/umd/popper.min.js"></script>
         <script src="/Scripts/bootstrap.min.js"></script>

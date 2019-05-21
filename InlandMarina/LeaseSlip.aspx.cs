@@ -13,39 +13,50 @@ namespace InlandMarina
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //string Name = " Amin Aden";
-            nameLbl.Text = CustomerDB.CustomerName(3);
+            int customerID = Convert.ToInt32(Session["UserName"]);
+            //int LeasedSlipID = Convert.ToInt32(Session["SlipID"]);
 
             List<string> leaseInfo = new List<string>();
-            leaseInfo = DockDB.getSlipBy(50);
+           
+            //This is were you can choose the slip you want to display
+            leaseInfo = DockDB.getSlipInfoBy(5); //Repleace by LeasedSlipID
 
-            //string DockA = "Dock A";
-            dockALbl.Text = leaseInfo[3]; //DockDB.dockname(1); 
+            nameLbl.Text = DockDB.getCustomerInfoBy(1); //Replace by CustomerID
 
-            //string DockB = "xman";
-            dockBLbl.Text = leaseInfo[2];
+            //Dock name
+            dockALbl.Text = leaseInfo[3]; 
+
+            // Width X Length
+            widthLengthLbl.Text = String.Format("{0} X {1}", leaseInfo[1], leaseInfo[2]);
+
+            //Electric service
             if (Convert.ToBoolean(leaseInfo[4]))
             {
-                numSlipsLbl.Text = "Yes";
+                numSlipsLbl.Text = " Yes";
             }
             else {
-                numSlipsLbl.Text = "No";
+                numSlipsLbl.Text =  " No";
             }
-            numSlipsLbl.Text = leaseInfo[4];
+           
+            //Water service
+            if (Convert.ToBoolean(leaseInfo[5]))
+            {
+                waterlbl.Text = " Yes";
+            }
+            else
+            {
+                waterlbl.Text = " No";
+            }
+
+            List<string> slipsLeased = new List<string>();
+
+
+            slipsLeased = DockDB.getSlipsByCustomer(1); //replace by CustomerID
+            foreach (string slip in slipsLeased)
+            {
+                slipLeaseBox.Items.Add(slip);
+            }
             
-
-            waterlbl.Text = leaseInfo[5];
-
-
-
-            //using (SqlConnection connection = new SqlConnection(connectionString))
-            //{
-            //    connection.Open();
-            //    // Do work here; connection closed on following line.  
-            //}
-
-
 
         }
     }

@@ -1,0 +1,13 @@
+﻿.champ {
+    margin:auto;
+}
+
+.color {
+    background-color: blue !important;
+    color: white;
+}
+
+.greyColor {
+    background-color: gray;
+    color: white;
+}

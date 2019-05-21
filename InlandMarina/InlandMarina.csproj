@@ -121,7 +121,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="stylesheet\StyleSheet1.css" />
+    <Content Include="Content\StyleSheet1.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />

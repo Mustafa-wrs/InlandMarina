@@ -9,52 +9,84 @@ namespace LeaseLibrary
 {
    public static class DockDB 
     {
-        public static string dockname(int ID)
-        {
-            string Name = "";
-            SqlConnection connection = MarinaDB.GetConnection();
-            try
-            {
-                string sql = "select name from dock where ID = 3;";
-                SqlCommand command = new SqlCommand(sql, connection);
-
-                SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-                while (reader.Read())
-                {
-                    Name = reader["name"].ToString();
-                }
-            }
-            catch (Exception ex) { }
-            finally
-            {
-                connection.Close();
-            }
-            return (Name);
-        }
-
-        public static List<string> getSlipBy(int ID)
+        public static List<string> getSlipInfoBy(int ID)
         {
             List<string> result = new List<string>();
             SqlConnection connection = MarinaDB.GetConnection();
             try
             {
-                string sql = "select s.ID, s.Width, s.Length, d.Name, d.ElectricalService, d.WaterService ";
-                sql += "from Slip s ";
-                sql += "join Dock d on s.DockID = d.ID ";
+                string sql = "SELECT s.ID, s.Length, s.Width, d.Name, d.ElectricalService, d.WaterService ";
+                sql += "FROM Slip s ";
+                sql += "JOIN DOCK d on s.DockID = d.ID ";
                 sql += "WHERE s.ID = " + ID;
+
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 while (reader.Read())
                 {
                     result.Add(reader["ID"].ToString()); //0
-                    result.Add(reader["Width"].ToString()); //1
-                    result.Add(reader["Length"].ToString());
-                    result.Add(reader["Name"].ToString());
-                    result.Add(reader["ElectricalService"].ToString());
-                    result.Add(reader["WaterService"].ToString());
+                    result.Add(reader["Length"].ToString());//1
+                    result.Add(reader["Width"].ToString());//2
+                    result.Add(reader["Name"].ToString()); //3
+                    result.Add(reader["ElectricalService"].ToString()); //4
+                    result.Add(reader["WaterService"].ToString());//5
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return result;
+        }
+
+        public static string getCustomerInfoBy(int ID)
+        {
+            String customerName = "";
+            SqlConnection connection = MarinaDB.GetConnection();
+            try
+            {
+                string sql = "SELECT FirstName + ' ' + LastName as FullName ";
+                sql += "FROM Customer WHERE ID = " + ID;
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    customerName = reader["FullName"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return customerName;
+        }
+
+        public static List<string> getSlipsByCustomer(int ID)
+        {
+            List<string> result = new List<string>();
+            SqlConnection connection = MarinaDB.GetConnection();
+            try
+            {
+                string sql = "SELECT SlipID FROM Lease WHERE CustomerID = " + ID;
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    result.Add(reader["SlipID"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.ToString());
             }
             finally
