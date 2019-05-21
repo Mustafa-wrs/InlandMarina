@@ -38,10 +38,17 @@
                         <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlLeaseSlip" runat="server" NavigateUrl="~/LeaseSlip.aspx">Lease Slip</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlRegister" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
                     </li>
                     <li class="nav-item">
-                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="hlContactUs" runat="server" NavigateUrl="~/ContactUs.aspx">Contact Us</asp:HyperLink>
+                        <% if (Session["UserName"] == null)
+                            { %>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink2" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
+                        <%}
+                            else
+                            {%>
+                        <asp:HyperLink class="nav-link py-2 d-none d-md-inline-block" ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">Logout</asp:HyperLink>
+                        <%} %>
                     </li>
                 </ul>
             </div>
@@ -56,36 +63,15 @@
         </div>
 
         <%-- Footer --%>
-        <footer class="container py-5">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <h5>Address</h5>
-                    <address>
-                        Inland Lake Marina<br />
-                        Box 123<br />
-                        Inland Lake, Arizona<br />
-                        86038<br />
-                    </address>
-                </div>
-                <div class="col-12 col-md">
-                    <h5>Out Contacts</h5>
-                    <address>
-                        (Offfice Phone) 928-450-2234<br />
-                        (Leasing Phone) 928-450-2235<br />
-                        (Fax) 928-450-2236<br />
-                    </address>
-                </div>
-                <div class="col-12 col-md">
-                    <h5>Our Team</h5>
-                    <address>
-                        Manager: Glenn Cooke<br />
-                        Slip Manager: Kimberley Carson<br />
-                        Contact email: info@inlandmarina.com<br />
-                    </address>
-                </div>
+        <footer class="text-muted footer">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>Inland Lake Marina, Box 123 | Inland Lake, Arizona, 86038</p>
+                <p>Email address: info@inlandmarina.com</p>
             </div>
         </footer>
-
     </form>
 </body>
 </html>

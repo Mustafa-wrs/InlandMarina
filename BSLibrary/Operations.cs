@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using DBLibrary;
 using System.Data.SqlClient;
+using System.Web;
 
 namespace BSLibrary
 {
@@ -56,8 +57,7 @@ namespace BSLibrary
         }
 
         public static bool customerIsLoggedIn() {
-
-            return true;
+            return HttpContext.Current.Session["UserName"] != null;
         }
     }
 }
