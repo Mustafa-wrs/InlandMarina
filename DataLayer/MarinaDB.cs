@@ -12,7 +12,7 @@ namespace DataLayer
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection();
-            string ConnectionString = ConfigurationManager.ConnectionStrings["mustafaConnection"].ConnectionString;
+            string ConnectionString = ConfigurationManager.ConnectionStrings["abedConnection"].ConnectionString;
             connection.ConnectionString = ConnectionString;
             connection.Open();
             return connection;

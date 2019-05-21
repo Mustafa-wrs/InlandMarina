@@ -66,36 +66,15 @@
         </div>
 
         <%-- Footer --%>
-        <footer class="container py-5" style="clear: both;">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <h5>Address</h5>
-                    <address>
-                        Inland Lake Marina<br />
-                        Box 123<br />
-                        Inland Lake, Arizona<br />
-                        86038<br />
-                    </address>
-                </div>
-                <div class="col-12 col-md">
-                    <h5>Out Contacts</h5>
-                    <address>
-                        (Offfice Phone) 928-450-2234<br />
-                        (Leasing Phone) 928-450-2235<br />
-                        (Fax) 928-450-2236<br />
-                    </address>
-                </div>
-                <div class="col-12 col-md">
-                    <h5>Our Team</h5>
-                    <address>
-                        Manager: Glenn Cooke<br />
-                        Slip Manager: Kimberley Carson<br />
-                        Contact email: info@inlandmarina.com<br />
-                    </address>
-                </div>
+        <footer class="text-muted footer">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>Inland Lake Marina, Box 123 | Inland Lake, Arizona, 86038</p>
+                <p>Email address: info@inlandmarina.com</p>
             </div>
         </footer>
-
     </form>
 </body>
 </html>

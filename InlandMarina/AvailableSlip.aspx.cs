@@ -38,19 +38,19 @@ namespace InlandMarina
 
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            if (!Operations.customerIsLoggedIn()) {
+            if (!Operations.customerIsLoggedIn())
+            {
                 Response.Redirect("\\Registration.aspx", true);
                 return;
             }
             var item = e.Item;
-            //lblResult2.Text = (item.FindControl("DropDownList1") as DropDownList).SelectedValue;
             int slipID = Convert.ToInt32((item.FindControl("DropDownList1") as DropDownList).SelectedValue);
             if (Operations.LeaseSlip(slipID, 1)) {
-                lblResult2.Text = "Transaction succeeded";
+                Session["LeasedSlipID"] = slipID;
                 Response.Redirect("\\LeaseSlip.aspx", true);
             } else
             {
-                lblResult2.Text = "Transaction failed";
+                
             }
         }
     }
