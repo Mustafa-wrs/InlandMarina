@@ -7,6 +7,7 @@
     <script src="Scripts/jquery-3.4.1.slim.min.js"></script>
     <script src="Scripts/umd/popper.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
     <style type="text/css">
         .auto-style6 {
             display: block;
