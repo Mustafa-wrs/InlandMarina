@@ -13,7 +13,7 @@ namespace LeaseLibrary
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection();
-            string ConnectionString = ConfigurationManager.ConnectionStrings["abedConnection"].ConnectionString; ;
+            string ConnectionString = ConfigurationManager.ConnectionStrings["mustafaConnection"].ConnectionString; ;
             connection.ConnectionString = ConnectionString;
             connection.Open();
             return connection;
