@@ -45,7 +45,8 @@ namespace InlandMarina
             }
             var item = e.Item;
             int slipID = Convert.ToInt32((item.FindControl("DropDownList1") as DropDownList).SelectedValue);
-            if (Operations.LeaseSlip(slipID, 1)) {
+            int customerID = Convert.ToInt32(Session["UserName"]);
+            if (Operations.LeaseSlip(slipID, customerID)) {
                 Session["LeasedSlipID"] = slipID;
                 Response.Redirect("\\LeaseSlip.aspx", true);
             } else

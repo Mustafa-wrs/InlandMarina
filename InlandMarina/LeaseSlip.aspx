@@ -13,7 +13,8 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item">Name:
                 <asp:Label ID="nameLbl" runat="server" Text=""></asp:Label></li>
-
+            <% if (Session["LeasedSlipID"] != null)
+                { %>
             <li class="list-group-item">Place:
                 <asp:Label ID="dockALbl" runat="server" Text=""></asp:Label></li>
 
@@ -24,7 +25,7 @@
                 <asp:Label ID="numSlipsLbl" runat="server" Text=""></asp:Label></li>
 
             <li class="list-group-item">Water:<asp:Label ID="waterlbl" runat="server" Text="Label"></asp:Label></li>
-
+            <%} %>
             <li class="list-group-item greyColor" style="text-align: center">Previous Slips</li>
 
         </ul>
